@@ -1,0 +1,61 @@
+{
+  "name": "@monorepo/web-react-vite-app",
+  "private": true,
+  "version": "0.1.17",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "yarn lint:js && yarn tsc:compile && yarn format:fix",
+    "lint:js": "eslint src --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "lint:js:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "tsc:compile": "tsc --noEmit",
+    "format": "prettier --check '**/*.(md|json)' 'src/**/*.(js|ts|jsx|tsx)'",
+    "format:fix": "prettier --loglevel silent --write '**/*.(md|json)' 'src/**/*.(js|ts|jsx|tsx)'"
+  },
+  "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@ethersproject/bignumber": "^5.7.0",
+    "@fortawesome/fontawesome-free": "^6.3.0",
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@keplr-wallet/types": "^0.12.75",
+    "@monorepo/design-tokens": "^0.1.14",
+    "@monorepo/eslint-prettier-config": "^0.1.14",
+    "@monorepo/ui-components": "^0.1.16",
+    "@sentry/react": "^7.63.0",
+    "eventemitter3": "^5.0.0",
+    "flowbite": "^1.6.6",
+    "js-sha3": "^0.8.0",
+    "node-stdlib-browser": "^1.2.0",
+    "patch-package": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.10",
+    "react-ga": "^3.3.1",
+    "react-ga4": "^2.1.0",
+    "react-router-dom": "6.8.1",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "tailwindcss": "^3.2.7",
+    "vite-plugin-babel-macros": "^1.0.6",
+    "vite-plugin-node-stdlib-browser": "0.2.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "typescript": "^5.4.5",
+    "vite": "^4.0.0"
+  },
+  "engines": {
+    "npm": ">=8.0.0 <9.0.0",
+    "node": "20.x"
+  }
+}

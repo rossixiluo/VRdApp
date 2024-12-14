@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+    .bg-valuerouter-btn-primary{
+        @apply  bg-valuerouter-primary;
+    }
+    .text-valuerouter-btn-primary{
+       @apply text-white
+        
+    }
+  
+
+

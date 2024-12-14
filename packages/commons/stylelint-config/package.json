@@ -1,0 +1,19 @@
+{
+  "name": "@commons/stylelint-config",
+  "version": "0.1.1",
+  "main": ".stylelintrc.js",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-config-twbs-bootstrap": "^2.1.0",
+    "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "engines" : { 
+    "npm" : ">=8.0.0 <9.0.0",
+    "node" : "18.x"
+  }
+}

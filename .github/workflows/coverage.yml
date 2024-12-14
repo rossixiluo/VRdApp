@@ -1,0 +1,26 @@
+name: Coverage
+
+on:
+  push:
+    pull_request:
+
+jobs:
+  coverage:
+    name: Tests coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: yarn
+
+      - name: Tests coverage
+        env: # Or as an environment variable
+          VITE_REACT_APP_INFURA_KEY: ${{ secrets.VITE_REACT_APP_INFURA_KEY }}
+        run: |
+          yarn test:ci

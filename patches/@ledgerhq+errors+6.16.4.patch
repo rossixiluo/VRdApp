@@ -1,0 +1,12 @@
+diff --git a/node_modules/@ledgerhq/errors/lib-es/index.js b/node_modules/@ledgerhq/errors/lib-es/index.js
+index 0d4718b..c15241e 100644
+--- a/node_modules/@ledgerhq/errors/lib-es/index.js
++++ b/node_modules/@ledgerhq/errors/lib-es/index.js
+@@ -125,6 +125,7 @@ export const DBWrongPassword = createCustomErrorClass("DBWrongPassword");
+ export const DBNotReset = createCustomErrorClass("DBNotReset");
+ export const SequenceNumberError = createCustomErrorClass("SequenceNumberError");
+ export const DisabledTransactionBroadcastError = createCustomErrorClass("DisabledTransactionBroadcastError");
+# +export const TransportRaceCondition = createCustomErrorClass("TransportPendingOperation");
+ /**
+  * Type of a Transport error used to represent all equivalent errors coming from all possible implementation of Transport
+  */

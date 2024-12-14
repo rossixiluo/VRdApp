@@ -1,0 +1,60 @@
+{
+  "name": "monorepo-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/emunhoz/monorepo-boilerplate.git",
+  "author": "emunhoz <edermunhozsantos@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "commit": "git-cz",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
+    "test:update": "lerna run --parallel test:update",
+    "start:web": "yarn workspace @monorepo/web-react-vite-app dev",
+    "start:server": "yarn workspace @monorepo/server start",
+    "build-app": "yarn workspace @monorepo/web-react-vite-app build",
+    "storybook": "yarn workspace @monorepo/ui-components storybook",
+    "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
+    "lint": "lerna run --parallel lint",
+    "test:ci": "lerna run --parallel test:coverage"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@commitlint/config-conventional": "^12.1.4",
+    "commitizen": "^4.2.2",
+    "commitlint-config-monorepo": "^2.0.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "git-commit-msg": "^0.3.0",
+    "git-cz": "^4.9.0",
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^5.4.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "engines": {
+    "npm": ">=8.0.0 <9.0.0",
+    "node": "20.x"
+  },
+  "dependencies": {
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "events": "^3.3.0",
+    "patch-package": "^8.0.0",
+    "react-if": "^4.1.4"
+  }
+}

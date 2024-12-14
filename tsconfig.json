@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": "./packages",
+    "paths": {
+    }
+  }
+}
